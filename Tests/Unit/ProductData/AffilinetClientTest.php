@@ -14,59 +14,59 @@ class AffilinetClientTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @expectedException \Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException
+     * @expectedException \Affilinet\Exceptions\AffilinetWebserviceException
      */
     public function testConstructorThrowsIfNoConfig()
     {
-        $affilinetClient = new \Affilinet\ProductData\AffilinetClient();
+        $affilinetClient = new \Affilinet\ProductData\AffilinetProductClient();
 
     }
 
     /**
-     * @expectedException \Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException
+     * @expectedException \Affilinet\Exceptions\AffilinetWebserviceException
      */
     public function testConstructorThrowsIfNoPublisherId()
     {
-        $affilinetClient = new \Affilinet\ProductData\AffilinetClient(['product_webservice_password' => '123456789']);
+        $affilinetClient = new \Affilinet\ProductData\AffilinetProductClient(['webservice_password' => '123456789']);
 
     }
 
     /**
-     * @expectedException \Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException
+     * @expectedException \Affilinet\Exceptions\AffilinetWebserviceException
      */
     public function testConstructorThrowsIfNoProductWebservicePassword()
     {
-        $affilinetClient = new \Affilinet\ProductData\AffilinetClient(['publisher_id' => '123']);
+        $affilinetClient = new \Affilinet\ProductData\AffilinetProductClient(['publisher_id' => '123']);
     }
 
     public function testConstructorUsesFallbackData()
     {
-        $publisherIDVarName = \Affilinet\ProductData\AffilinetClient::PUBLISHER_ID_ENV_NAME;
-        $webservicePassVarName = \Affilinet\ProductData\AffilinetClient::PRODUCT_WEBSERVICE_PASSWORD_ENV_NAME;
+        $publisherIDVarName = \Affilinet\ProductData\AffilinetProductClient::PUBLISHER_ID_ENV_NAME;
+        $webservicePassVarName = \Affilinet\ProductData\AffilinetProductClient::WEBSERVICE_PASSWORD_ENV_NAME;
         putenv("{$publisherIDVarName}=123");
         putenv("{$webservicePassVarName}=123");
-        $affilinetClient = new \Affilinet\ProductData\AffilinetClient();
+        $affilinetClient = new \Affilinet\ProductData\AffilinetProductClient();
     }
 
     public function testGetterSetter()
     {
         $config = [
-            'product_webservice_password' => '123',
+            'webservice_password' => '123',
             'publisher_id' => '123'
         ];
-        $affilinetClient = new \Affilinet\ProductData\AffilinetClient();
-        $this->assertEquals($config['product_webservice_password'], $affilinetClient->getProductDataWebservicePassword());
+        $affilinetClient = new \Affilinet\ProductData\AffilinetProductClient();
+        $this->assertEquals($config['webservice_password'], $affilinetClient->getWebservicePassword());
         $this->assertEquals($config['publisher_id'], $affilinetClient->getPublisherId());
     }
 
     public function testHttpClientExists()
     {
         $config = [
-            'product_webservice_password' => '123',
+            'webservice_password' => '123',
             'publisher_id' => '123'
         ];
-        $affilinetClient = new \Affilinet\ProductData\AffilinetClient($config);
-        $this->assertInstanceOf(\Affilinet\ProductData\HttpClient\HttpClientInterface::class, $affilinetClient->getHttpClient());
+        $affilinetClient = new \Affilinet\ProductData\AffilinetProductClient($config);
+        $this->assertInstanceOf(\Affilinet\HttpClient\HttpClientInterface::class, $affilinetClient->getHttpClient());
     }
 
     public function testUseExternalGuzzleClient()
@@ -79,11 +79,11 @@ class AffilinetClientTest extends \PHPUnit_Framework_TestCase
             'timeout' => 2.0,
         ]);
         $config = [
-            'product_webservice_password' => '123',
+            'webservice_password' => '123',
             'publisher_id' => '123',
             'http_client' => $client
         ];
-        new \Affilinet\ProductData\AffilinetClient($config);
+        new \Affilinet\ProductData\AffilinetProductClient($config);
     }
 
     public function testUsageOfExternalClientLibraryImplementingHttpClientInterface()
@@ -94,13 +94,13 @@ class AffilinetClientTest extends \PHPUnit_Framework_TestCase
             // You can set any number of default request options.
             'timeout'  => 2.0,
         ]);
-        $http_client = new \Affilinet\ProductData\HttpClient\GuzzleClient($client);
+        $http_client = new \Affilinet\HttpClient\GuzzleClient($client);
         $config = [
-            'product_webservice_password' => '123',
+            'webservice_password' => '123',
             'publisher_id' => '123',
             'http_client' => $http_client
         ];
-        new \Affilinet\ProductData\AffilinetClient($config);
+        new \Affilinet\ProductData\AffilinetProductClient($config);
     }
 
     /**
@@ -109,11 +109,11 @@ class AffilinetClientTest extends \PHPUnit_Framework_TestCase
     public function testInvalidClientThrows()
     {
         $config = [
-            'product_webservice_password' => '123',
+            'webservice_password' => '123',
             'publisher_id' => '123',
             'http_client' => '123'
         ];
-        new \Affilinet\ProductData\AffilinetClient($config);
+        new \Affilinet\ProductData\AffilinetProductClient($config);
     }
 
 }

@@ -9,8 +9,7 @@
 
 namespace Affilinet\ProductData\Requests;
 
-use Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException;
-use Affilinet\ProductData\Requests\Helper\QueryInterface;
+use Affilinet\Exceptions\AffilinetProductWebserviceException;
 use Affilinet\ProductData\Requests\Traits\ImageTrait;
 use Affilinet\ProductData\Requests\Traits\LogoTrait;
 use Affilinet\ProductData\Requests\Traits\PaginationTrait;
@@ -19,6 +18,8 @@ use Affilinet\ProductData\Responses\ProductsResponseInterface;
 use Affilinet\ProductData\Responses\ResponseElements\CategoryInterface;
 use Affilinet\ProductData\Responses\ResponseElements\Product;
 use Affilinet\ProductData\Responses\ResponseElements\ShopInterface;
+use Affilinet\Requests\AbstractRequest;
+use Affilinet\Requests\Helper\QueryInterface;
 use \GuzzleHttp\Psr7\Request;
 
 /**

@@ -7,10 +7,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Affilinet\ProductData\Requests;
+namespace Affilinet\Requests;
 
-use Affilinet\ProductData\AffilinetClient;
-use Affilinet\ProductData\Responses\ResponseInterface;
+use Affilinet\ProductData\AffilinetProductClient;
+use Affilinet\Responses\ResponseInterface;
 
 /**
  * Interface RequestInterface
@@ -18,9 +18,9 @@ use Affilinet\ProductData\Responses\ResponseInterface;
 interface RequestInterface
 {
     /**
-     * @param \Affilinet\ProductData\AffilinetClient $affilinetClient
+     * @param \Affilinet\ProductData\AffilinetProductClient $affilinetClient
      */
-    public function __construct(AffilinetClient $affilinetClient);
+    public function __construct(AffilinetProductClient $affilinetClient);
 
     /**
      * @return ResponseInterface
@@ -42,7 +42,7 @@ interface RequestInterface
      * Generate ProductsRequest from URI query string
      *
      * @param $serialized string
-     * @return ProductsRequest
+     * @return AbstractRequest
      */
     public function unserialize($serialized);
 

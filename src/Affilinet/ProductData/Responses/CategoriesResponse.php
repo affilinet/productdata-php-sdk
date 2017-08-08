@@ -11,6 +11,7 @@ namespace Affilinet\ProductData\Responses;
 
 use Affilinet\ProductData\Responses\ResponseElements\Category;
 use Affilinet\ProductData\Responses\ResponseElements\CategoryInterface;
+use Affilinet\Responses\AbstractResponse;
 use Psr\Http\Message\ResponseInterface;
 
 /**

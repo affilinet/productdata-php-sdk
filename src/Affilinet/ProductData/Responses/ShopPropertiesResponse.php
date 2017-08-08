@@ -10,6 +10,7 @@
 namespace Affilinet\ProductData\Responses;
 use Affilinet\ProductData\Responses\ResponseElements\ShopProperty;
 use Affilinet\ProductData\Responses\ResponseElements\ShopPropertyInterface;
+use Affilinet\Responses\AbstractResponse;
 use Psr\Http\Message\ResponseInterface as PsrResponse;
 
 /**

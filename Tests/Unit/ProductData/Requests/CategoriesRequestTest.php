@@ -24,11 +24,11 @@ class CategoriesRequestTest extends \PHPUnit_Framework_TestCase
         $log = new \Monolog\Logger('testlog');
         $log->pushHandler(new \Monolog\Handler\TestHandler());
 
-        $this->affilinetClient = new \Affilinet\ProductData\AffilinetClient(
+        $this->affilinetClient = new \Affilinet\ProductData\AffilinetProductClient(
             [
                 'log' => $log,
                 'publisher_id' => 'test',
-                'product_webservice_password' => 'test'
+                'webservice_password' => 'test'
             ]
         );
 

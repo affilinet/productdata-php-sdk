@@ -11,6 +11,7 @@ namespace Affilinet\ProductData\Responses;
 
 use Affilinet\ProductData\Responses\ResponseElements\Facet;
 use Affilinet\ProductData\Responses\ResponseElements\Product;
+use Affilinet\Responses\ResponseInterface;
 
 /**
  * Interface ProductsResponseInterface

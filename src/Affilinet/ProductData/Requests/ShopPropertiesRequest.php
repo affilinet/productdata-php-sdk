@@ -9,9 +9,10 @@
 
 namespace Affilinet\ProductData\Requests;
 
-use Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException;
+use Affilinet\Exceptions\AffilinetProductWebserviceException;
 use Affilinet\ProductData\Responses\ShopPropertiesResponse;
 use Affilinet\ProductData\Responses\ShopPropertiesResponseInterface;
+use Affilinet\Requests\AbstractRequest;
 use Doctrine\Instantiator\Exception\InvalidArgumentException;
 
 /**

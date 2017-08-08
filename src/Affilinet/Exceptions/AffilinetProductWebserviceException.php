@@ -7,13 +7,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Affilinet\ProductData\Exceptions;
+namespace Affilinet\Exceptions;
 
 /**
  * Class AffilinetProductWebserviceException
  *
  */
-class AffilinetProductWebserviceException extends \Exception
+class AffilinetProductWebserviceException extends AffilinetWebserviceException
 {
 
 }

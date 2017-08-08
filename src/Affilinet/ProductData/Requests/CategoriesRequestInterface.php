@@ -10,6 +10,7 @@
 namespace Affilinet\ProductData\Requests;
 
 use Affilinet\ProductData\Responses\CategoriesResponseInterface;
+use Affilinet\Requests\RequestInterface;
 
 /**
  *  Get the categories of a shop

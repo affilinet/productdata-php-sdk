@@ -7,12 +7,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Affilinet\ProductData;
+namespace Affilinet;
 
-use Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException;
-use Affilinet\ProductData\HttpClient\GuzzleClient;
-use Affilinet\ProductData\HttpClient\HttpClientInterface;
-use Affilinet\ProductData\Requests\RequestInterface;
+use Affilinet\Exceptions\AffilinetWebserviceException;
+use Affilinet\HttpClient\GuzzleClient;
+use Affilinet\HttpClient\HttpClientInterface;
+use Affilinet\Requests\RequestInterface;
+use Affilinet\Responses\ResponseInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use Monolog\Handler\SyslogHandler;
@@ -32,7 +33,7 @@ class AffilinetClient
     /**
      * @const string The name of the environment variable that contains your Affilinet Publisher Webservice Password
      */
-    const PRODUCT_WEBSERVICE_PASSWORD_ENV_NAME = 'AFFILINET_PRODUCT_WEBSERVICE_PASSWORD';
+    const WEBSERVICE_PASSWORD_ENV_NAME = 'AFFILINET_WEBSERVICE_PASSWORD';
 
     /**
      * @var $publisherId string
@@ -40,9 +41,9 @@ class AffilinetClient
     public $publisherId;
 
     /**
-     * @var $productDataWebservicePassword string
+     * @var $webservicePassword string
      */
-    public $productDataWebservicePassword;
+    public $webservicePassword;
 
     /**
      * @var $httpClient HttpClientInterface
@@ -57,20 +58,20 @@ class AffilinetClient
     /**
      * PublisherClient constructor.
      * @param  array                               $config
-     * @throws AffilinetProductWebserviceException
+     * @throws AffilinetWebserviceException
      */
     public function __construct(array $config = [])
     {
         $config = array_merge([
             'publisher_id' => getenv(static::PUBLISHER_ID_ENV_NAME),
-            'product_webservice_password' => getenv(static::PRODUCT_WEBSERVICE_PASSWORD_ENV_NAME)
+            'webservice_password' => getenv(static::WEBSERVICE_PASSWORD_ENV_NAME)
         ], $config);
 
         if (!$config['publisher_id']) {
-            throw new AffilinetProductWebserviceException('Required "publisher_id" key not supplied in config and could not find fallback environment variable "' . static::PUBLISHER_ID_ENV_NAME . '"');
+            throw new AffilinetWebserviceException('Required "publisher_id" key not supplied in config and could not find fallback environment variable "' . static::PUBLISHER_ID_ENV_NAME . '"');
         }
-        if (!$config['product_webservice_password']) {
-            throw new AffilinetProductWebserviceException('Required "product_webservice_password" key not supplied in config and could not find fallback environment variable "' . static::PRODUCT_WEBSERVICE_PASSWORD_ENV_NAME . '"');
+        if (!$config['webservice_password']) {
+            throw new AffilinetWebserviceException('Required "webservice_password" key not supplied in config and could not find fallback environment variable "' . static::WEBSERVICE_PASSWORD_ENV_NAME . '"');
         }
         if (isset($config['log'])) {
             $this->log = $config['log'];
@@ -93,7 +94,7 @@ class AffilinetClient
         }
 
         $this->publisherId = $config['publisher_id'];
-        $this->productDataWebservicePassword = $config['product_webservice_password'];
+        $this->webservicePassword = $config['webservice_password'];
 
     }
 
@@ -108,9 +109,9 @@ class AffilinetClient
     /**
      * @return string
      */
-    public function getProductDataWebservicePassword()
+    public function getWebservicePassword()
     {
-        return $this->productDataWebservicePassword;
+        return $this->webservicePassword;
     }
 
     /**
@@ -130,8 +131,8 @@ class AffilinetClient
     }
 
     /**
-     * @param  RequestInterface            $request
-     * @return Responses\ResponseInterface
+     * @param  RequestInterface $request
+     * @return ResponseInterface
      */
     public function send(RequestInterface $request)
     {

@@ -7,16 +7,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Affilinet\ProductData\Responses;
+namespace Affilinet\Exceptions;
 
 /**
- * Interface ResponseInterface
+ * Class AffilinetProductWebserviceException
+ *
  */
-interface ResponseInterface extends \JsonSerializable
+class AffilinetPublisherWebserviceException extends AffilinetWebserviceException
 {
-
-    public function getResponseString();
-
-    public function toArray();
 
 }

@@ -9,11 +9,12 @@
 
 namespace Affilinet\ProductData\Requests;
 
-use Affilinet\ProductData\AffilinetClient;
-use Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException;
+use Affilinet\Exceptions\AffilinetProductWebserviceException;
+use Affilinet\ProductData\AffilinetProductClient;
 use Affilinet\ProductData\Requests\Traits\PaginationTrait;
 use Affilinet\ProductData\Responses\CategoriesResponse;
 use Affilinet\ProductData\Responses\CategoriesResponseInterface;
+use Affilinet\Requests\AbstractRequest;
 use Doctrine\Instantiator\Exception\InvalidArgumentException;
 
 /**
@@ -34,9 +35,9 @@ class CategoriesRequest extends AbstractRequest implements CategoriesRequestInte
 
     /**
      * CategoriesRequest constructor.
-     * @param AffilinetClient $affilinetClient
+     * @param AffilinetProductClient $affilinetClient
      */
-    public function __construct(AffilinetClient $affilinetClient)
+    public function __construct(AffilinetProductClient $affilinetClient)
     {
         parent::__construct($affilinetClient);
         $this->queryParams['ShopId'] = 0;

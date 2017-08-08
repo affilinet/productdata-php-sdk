@@ -10,6 +10,7 @@
 namespace Affilinet\ProductData\Requests;
 
 use Affilinet\ProductData\Responses\ShopsResponseInterface;
+use Affilinet\Requests\RequestInterface;
 
 /**
  * Class ShopsRequestInterface

@@ -24,11 +24,11 @@ class ShopsRequestTest extends \PHPUnit_Framework_TestCase
         $log = new \Monolog\Logger('testlog');
         $log->pushHandler(new \Monolog\Handler\TestHandler());
 
-        $this->affilinetClient = new \Affilinet\ProductData\AffilinetClient(
+        $this->affilinetClient = new \Affilinet\ProductData\AffilinetProductClient(
             [
                 'log' => $log,
                 'publisher_id' => \Affilinet\Tests\AffilinetTestCredentials::$publisherId,
-                'product_webservice_password' => \Affilinet\Tests\AffilinetTestCredentials::$productWebservicePassword
+                'webservice_password' => \Affilinet\Tests\AffilinetTestCredentials::$productWebservicePassword
             ]
         );
 

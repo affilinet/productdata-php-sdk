@@ -16,7 +16,7 @@ class SearchProductsIntegrationTest extends \PHPUnit_Framework_TestCase
     use VladaHejda\AssertException;
 
     /**
-     * @var $affilinetClient \Affilinet\ProductData\AffilinetClient
+     * @var $affilinetClient \Affilinet\ProductData\AffilinetProductClient
      */
     protected $affilinetClient;
 
@@ -29,11 +29,11 @@ class SearchProductsIntegrationTest extends \PHPUnit_Framework_TestCase
         $log = new \Monolog\Logger('testlog');
         $log->pushHandler(new \Monolog\Handler\TestHandler());
 
-        $this->affilinetClient = new \Affilinet\ProductData\AffilinetClient(
+        $this->affilinetClient = new \Affilinet\ProductData\AffilinetProductClient(
             [
                 'log' => $log,
                 'publisher_id' => \Affilinet\Tests\AffilinetTestCredentials::$publisherId,
-                'product_webservice_password' => \Affilinet\Tests\AffilinetTestCredentials::$productWebservicePassword,
+                'webservice_password' => \Affilinet\Tests\AffilinetTestCredentials::$productWebservicePassword,
             ]
         );
 
@@ -74,7 +74,7 @@ class SearchProductsIntegrationTest extends \PHPUnit_Framework_TestCase
 
         $this->assertException(
             $test,
-            \Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException::class,
+            \Affilinet\Exceptions\AffilinetWebserviceException::class,
             0, 'The given SearchProductsRequest is not valid. - The given SearchProductsRequest is not valid. FilterQuery ‘invalidFilterQuery’ is not supported' );
     }
 
@@ -98,9 +98,8 @@ class SearchProductsIntegrationTest extends \PHPUnit_Framework_TestCase
 
     public function testFindOneProduct()
     {
-
         $search = new \Affilinet\ProductData\Requests\ProductsRequest($this->affilinetClient);
-        $result = $search->findOne('5495949');
+        $result = $search->findOne('843922757');
 
         $this->assertInstanceOf(\Affilinet\ProductData\Responses\ResponseElements\Product::class, $result);
     }

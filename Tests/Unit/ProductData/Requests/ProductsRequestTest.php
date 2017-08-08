@@ -24,11 +24,11 @@ class ProductsRequestTest extends \PHPUnit_Framework_TestCase
         $log = new \Monolog\Logger('testlog');
         $log->pushHandler(new \Monolog\Handler\TestHandler());
 
-        $this->affilinetClient = new \Affilinet\ProductData\AffilinetClient(
+        $this->affilinetClient = new \Affilinet\ProductData\AffilinetProductClient(
             [
                 'log' => $log,
                 'publisher_id' => \Affilinet\Tests\AffilinetTestCredentials::$publisherId,
-                'product_webservice_password' => \Affilinet\Tests\AffilinetTestCredentials::$productWebservicePassword
+                'webservice_password' => \Affilinet\Tests\AffilinetTestCredentials::$productWebservicePassword
             ]
         );
 
@@ -42,7 +42,7 @@ class ProductsRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException
+     * @expectedException \Affilinet\Exceptions\AffilinetProductWebserviceException
      */
     public function testExcludeShopIdsCanNotBeUsedWithOnlyFromShopIds()
     {
@@ -83,7 +83,7 @@ class ProductsRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException
+     * @expectedException \Affilinet\Exceptions\AffilinetProductWebserviceException
      */
     public function testOnlyFromShopIdsCanNotBeUsedWithExcludeShopIds()
     {
@@ -711,7 +711,7 @@ class ProductsRequestTest extends \PHPUnit_Framework_TestCase
     public function testQueryBuilder()
     {
         $search = new \Affilinet\ProductData\Requests\ProductsRequest($this->affilinetClient);
-        $query = new \Affilinet\ProductData\Requests\Helper\Query();
+        $query = new \Affilinet\Requests\Helper\Query();
 
         $search->query(
             $query->where(
@@ -728,7 +728,7 @@ class ProductsRequestTest extends \PHPUnit_Framework_TestCase
     public function testQueryBuilderWhere()
     {
         $search = new \Affilinet\ProductData\Requests\ProductsRequest($this->affilinetClient);
-        $query = new \Affilinet\ProductData\Requests\Helper\Query();
+        $query = new \Affilinet\Requests\Helper\Query();
 
         $search->query(
             $query
@@ -743,7 +743,7 @@ class ProductsRequestTest extends \PHPUnit_Framework_TestCase
     public function testQueryBuilderContains()
     {
         $search = new \Affilinet\ProductData\Requests\ProductsRequest($this->affilinetClient);
-        $query = new \Affilinet\ProductData\Requests\Helper\Query();
+        $query = new \Affilinet\Requests\Helper\Query();
 
         $search->query(
             $query
@@ -758,7 +758,7 @@ class ProductsRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException
+     * @expectedException \Affilinet\Exceptions\AffilinetProductWebserviceException
      */
     public function testProductRequestMustNotBeEmpty()
     {

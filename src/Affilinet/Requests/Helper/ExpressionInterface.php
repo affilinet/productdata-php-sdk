@@ -6,7 +6,7 @@
  * Time: 21:37
  */
 
-namespace Affilinet\ProductData\Requests\Helper;
+namespace Affilinet\Requests\Helper;
 
 interface ExpressionInterface
 {

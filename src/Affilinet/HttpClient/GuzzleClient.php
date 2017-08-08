@@ -7,9 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Affilinet\ProductData\HttpClient;
+namespace Affilinet\HttpClient;
 
-use Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException;
+use Affilinet\Exceptions\AffilinetProductWebserviceException;
 use GuzzleHttp\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

@@ -18,7 +18,7 @@ class DateParserTest extends \PHPUnit_Framework_TestCase
         date_default_timezone_set("Europe/Berlin");
 
         $dateString = '/Date(1468928770807+0200)/';
-        $dateTime = \Affilinet\ProductData\Responses\DataParser::parseDate($dateString);
+        $dateTime = \Affilinet\Responses\DataParser::parseDate($dateString);
         $this->assertEquals('7200', $dateTime->getOffset());
         $this->assertEquals(new DateTimeZone('+02:00'), $dateTime->getTimezone());
         $this->assertEquals('1468921570', $dateTime->getTimestamp());
@@ -31,7 +31,7 @@ class DateParserTest extends \PHPUnit_Framework_TestCase
     public function testInvalidStringThrowsUnexpectedValueException()
     {
         $dateString = 'i am not a correct js time object';
-        $dateTime = \Affilinet\ProductData\Responses\DataParser::parseDate($dateString);
+        $dateTime = \Affilinet\Responses\DataParser::parseDate($dateString);
     }
 
 }

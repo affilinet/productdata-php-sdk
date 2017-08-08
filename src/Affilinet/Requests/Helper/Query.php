@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Affilinet\ProductData\Requests\Helper;
+namespace Affilinet\Requests\Helper;
 
 /**
  * Class QueryBuilderTrait

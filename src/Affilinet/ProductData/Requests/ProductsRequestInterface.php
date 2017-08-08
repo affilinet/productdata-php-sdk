@@ -9,13 +9,14 @@
 
 namespace Affilinet\ProductData\Requests;
 
-use Affilinet\ProductData\AffilinetClient;
-use Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException;
-use Affilinet\ProductData\Requests\Helper\QueryInterface;
+use Affilinet\Exceptions\AffilinetProductWebserviceException;
+use Affilinet\ProductData\AffilinetProductClient;
 use Affilinet\ProductData\Responses\ProductsResponseInterface;
 use Affilinet\ProductData\Responses\ResponseElements\CategoryInterface;
 use Affilinet\ProductData\Responses\ResponseElements\Product;
 use Affilinet\ProductData\Responses\ResponseElements\ShopInterface;
+use Affilinet\Requests\Helper\QueryInterface;
+use Affilinet\Requests\RequestInterface;
 
 /**
  * Interface ProductsRequestInterface
@@ -40,7 +41,7 @@ interface ProductsRequestInterface extends \Serializable, RequestInterface
     public function find(array $productIds);
 
     /**
-     * @return AffilinetClient
+     * @return AffilinetProductClient
      */
     public function getAffilinetClient();
 

@@ -7,9 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Affilinet\ProductData\Requests;
+namespace Affilinet\Requests;
 
-use Affilinet\ProductData\AffilinetClient;
+use Affilinet\ProductData\AffilinetProductClient;
 use GuzzleHttp\Psr7\Request;
 
 /**
@@ -19,7 +19,7 @@ abstract class AbstractRequest implements RequestInterface
 {
 
     /**
-     * @var $affilinetClient AffilinetClient
+     * @var $affilinetClient AffilinetProductClient
      */
     protected $affilinetClient;
 
@@ -29,9 +29,9 @@ abstract class AbstractRequest implements RequestInterface
     protected $queryParams;
 
     /**
-     * @param \Affilinet\ProductData\AffilinetClient $affilinetClient
+     * @param \Affilinet\ProductData\AffilinetProductClient $affilinetClient
      */
-    public function __construct(AffilinetClient $affilinetClient)
+    public function __construct(AffilinetProductClient $affilinetClient)
     {
         $this->affilinetClient = $affilinetClient;
     }
@@ -51,13 +51,13 @@ abstract class AbstractRequest implements RequestInterface
     {
         $query = $this->queryParams;
         $query['PublisherId'] = $this->getAffilinetClient()->getPublisherId();
-        $query['Password'] = $this->getAffilinetClient()->getProductDataWebservicePassword();
+        $query['Password'] = $this->getAffilinetClient()->getWebservicePassword();
 
         return http_build_query($query);
     }
 
     /**
-     * @return AffilinetClient
+     * @return AffilinetProductClient
      */
     public function getAffilinetClient()
     {

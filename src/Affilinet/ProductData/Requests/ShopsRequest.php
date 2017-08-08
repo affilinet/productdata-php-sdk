@@ -9,11 +9,12 @@
 
 namespace Affilinet\ProductData\Requests;
 
-use Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException;
+use Affilinet\Exceptions\AffilinetProductWebserviceException;
 use Affilinet\ProductData\Requests\Traits\ShopLogoTrait;
 use Affilinet\ProductData\Requests\Traits\PaginationTrait;
 use Affilinet\ProductData\Responses\ShopsResponse;
 use Affilinet\ProductData\Responses\ShopsResponseInterface;
+use Affilinet\Requests\AbstractRequest;
 
 /**
  * Class ShopsRequest

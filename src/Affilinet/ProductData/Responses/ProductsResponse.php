@@ -12,6 +12,7 @@ namespace Affilinet\ProductData\Responses;
 
 use Affilinet\ProductData\Responses\ResponseElements\Facet;
 use Affilinet\ProductData\Responses\ResponseElements\Product;
+use Affilinet\Responses\AbstractResponse;
 use Psr\Http\Message\ResponseInterface as PsrResponse;
 
 /**

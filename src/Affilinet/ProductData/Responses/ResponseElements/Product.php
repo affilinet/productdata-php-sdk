@@ -9,7 +9,7 @@
 
 namespace Affilinet\ProductData\Responses\ResponseElements;
 
-use Affilinet\ProductData\Responses\DataParser;
+use Affilinet\Responses\DataParser;
 
 class Product implements ProductInterface
 {

@@ -9,8 +9,9 @@
 
 namespace Affilinet\ProductData\Requests;
 
-use Affilinet\ProductData\Exceptions\AffilinetProductWebserviceException;
+use Affilinet\Exceptions\AffilinetProductWebserviceException;
 use Affilinet\ProductData\Responses\ShopPropertiesResponseInterface;
+use Affilinet\Requests\RequestInterface;
 
 /**
  * Class ShopPropertiesRequestInterface

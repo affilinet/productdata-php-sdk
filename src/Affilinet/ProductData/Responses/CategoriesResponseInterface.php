@@ -10,6 +10,7 @@
 namespace Affilinet\ProductData\Responses;
 
 use Affilinet\ProductData\Responses\ResponseElements\CategoryInterface;
+use Affilinet\Responses\ResponseInterface;
 
 /**
  * Class CategoriesResponseInterface

@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Affilinet\ProductData\Responses;
+namespace Affilinet\Responses;
 
 trait DataParser
 {
