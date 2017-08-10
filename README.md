@@ -71,4 +71,4 @@ phpunit --exclude-group integration
 
 ## License
 
-Please see the [license file](https://github.com/affilinet/php-sdk/blob/master/LICENSE) for more information.
+Please see the [license file](https://github.com/affilinet/productdata-php-sdk/blob/master/LICENSE) for more information.
