@@ -53,7 +53,7 @@ abstract class AbstractRequest implements RequestInterface
         $query['PublisherId'] = $this->getAffilinetClient()->getPublisherId();
         $query['Password'] = $this->getAffilinetClient()->getProductDataWebservicePassword();
 
-        return http_build_query($query);
+        return http_build_query($query, '' , '&');
     }
 
     /**
