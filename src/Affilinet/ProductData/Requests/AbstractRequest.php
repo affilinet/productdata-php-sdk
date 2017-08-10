@@ -71,7 +71,7 @@ abstract class AbstractRequest implements RequestInterface
     {
         $query = $this->queryParams;
         if (empty($query)) return '';
-        return http_build_query($query);
+        return http_build_query($query, '' , '&');
     }
 
     /**
