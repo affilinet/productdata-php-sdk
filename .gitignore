@@ -1,4 +1,7 @@
+vendor/
+Tests/AffilinetTestCredentials.php
 _site
+<<<<<<< HEAD
 .jekyll-metadata
 .sass-cache
 
@@ -6,3 +9,5 @@ _site
 Tests/
 composer.lock
 vendor/
+=======
+>>>>>>> master

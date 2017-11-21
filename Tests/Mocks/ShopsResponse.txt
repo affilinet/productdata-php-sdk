@@ -1,0 +1,150 @@
+{
+  "GetShopListSummary": {
+    "Records": 10,
+    "TotalRecords": 26,
+    "TotalPages": 3,
+    "CurrentPage": 1
+  },
+  "Shops": [
+    {
+      "ShopId": 376,
+      "ProgramId": 2941,
+      "ShopTitle": "1&1 Internet - DSL",
+      "LastUpdate": "\/Date(1425476603827+0100)\/",
+      "ShopLink": "http://dsl.1und1.de/?ac=OM.AD.AD097K01827T1554a",
+      "ProductCount": 9,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 1775,
+      "ProgramId": 2941,
+      "ShopTitle": "1&1 Internet - Mobile Internet",
+      "LastUpdate": "\/Date(1467723923530+0200)\/",
+      "ShopLink": "http://dsl.1und1.de/?ac=OM.AD.AD097K01827T1554a",
+      "ProductCount": 1080,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 640,
+      "ProgramId": 3381,
+      "ShopTitle": "Hallobabysitter.de",
+      "LastUpdate": "\/Date(1469112739113+0200)\/",
+      "ShopLink": "http://www.hallobabysitter.de",
+      "ProductCount": 8460,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 930,
+      "ProgramId": 3381,
+      "ShopTitle": "Hallobabysitter AT",
+      "LastUpdate": "\/Date(1469155583607+0200)\/",
+      "ShopLink": "http://www.hallobabysitter.de",
+      "ProductCount": 1404,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 1364,
+      "ProgramId": 3381,
+      "ShopTitle": "HalloBabysitter.de - Elternsuche",
+      "LastUpdate": "\/Date(1469168520793+0200)\/",
+      "ShopLink": "http://www.hallobabysitter.de",
+      "ProductCount": 225,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 1365,
+      "ProgramId": 3381,
+      "ShopTitle": "Hallobabysitter.de - Nachhilfelehrer",
+      "LastUpdate": "\/Date(1469101600723+0200)\/",
+      "ShopLink": "http://www.hallobabysitter.de",
+      "ProductCount": 4862,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 100,
+      "ProgramId": 3436,
+      "ShopTitle": "Gesamtliste - 100",
+      "LastUpdate": "\/Date(1468968667717+0200)\/",
+      "ShopLink": "http://www.adultshop.de/?sPartner=affilinet",
+      "ProductCount": 6018,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 472,
+      "ProgramId": 4586,
+      "ShopTitle": "Maxdome",
+      "LastUpdate": "\/Date(1469168378380+0200)\/",
+      "ShopLink": "https://angebote.maxdome.de/monatspaket/?campaignId=DEFAULT_MAXDOME_PAKET_CAMPAIGN&packageType=premium_basic_1&ac=0I15ZCTGCHUD",
+      "ProductCount": 73642,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 973,
+      "ProgramId": 6520,
+      "ShopTitle": "Codello",
+      "LastUpdate": "\/Date(1469151078333+0200)\/",
+      "ShopLink": "http://www.codello.de/shop/home/?sxx_partner=affilinet_de_neu",
+      "ProductCount": 698,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    },
+    {
+      "ShopId": 979,
+      "ProgramId": 6520,
+      "ShopTitle": "Sammelfeed (Alle Brands)",
+      "LastUpdate": "\/Date(1469151099343+0200)\/",
+      "ShopLink": "http://www.codello.de/shop/home/?sxx_partner=affilinet_de_neu",
+      "ProductCount": 3811,
+      "Logo": {
+        "LogoScale": "NoLogo",
+        "URL": "",
+        "Width": 0,
+        "Height": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "GetCategoryListSummary": {
+    "Records": 7,
+    "TotalRecords": 7,
+    "TotalPages": 1,
+    "CurrentPage": 1,
+    "ProgramId": 0,
+    "ProgramTitle": "affilinet",
+    "ShopTitle": "affilinet",
+    "ShopId": 0
+  },
+  "Categories": [
+    {
+      "Id": 237,
+      "IdPath": "237",
+      "Title": "Film",
+      "TitlePath": "Film",
+      "ProductCount": 73642
+    },
+    {
+      "Id": 32,
+      "IdPath": "32",
+      "Title": "Baby",
+      "TitlePath": "Baby",
+      "ProductCount": 10089
+    },
+    {
+      "Id": 14,
+      "IdPath": "14",
+      "Title": "Kleidung & Accessoires",
+      "TitlePath": "Kleidung & Accessoires",
+      "ProductCount": 9442
+    },
+    {
+      "Id": 74,
+      "IdPath": "17>74",
+      "Title": "Erotikartikel",
+      "TitlePath": "Freizeit & Hobby > Erotikartikel",
+      "ProductCount": 6018
+    },
+    {
+      "Id": 36,
+      "IdPath": "32>36",
+      "Title": "Sonstige",
+      "TitlePath": "Baby > Sonstige",
+      "ProductCount": 4862
+    },
+    {
+      "Id": 10,
+      "IdPath": "10",
+      "Title": "Telekommunikation",
+      "TitlePath": "Telekommunikation",
+      "ProductCount": 1089
+    },
+    {
+      "Id": 89,
+      "IdPath": "14>89",
+      "Title": "Herrenbekleidung",
+      "TitlePath": "Kleidung & Accessoires > Herrenbekleidung",
+      "ProductCount": 341
+    }
+  ]
+}

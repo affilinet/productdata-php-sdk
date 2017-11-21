@@ -1,0 +1,16 @@
+{
+  "GetPropertyListSummary": {
+    "ShopId": 640,
+    "TotalCount": 2
+  },
+  "PropertyCounts": [
+    {
+      "PropertyName": "CF_location",
+      "TotalCount": 8460
+    },
+    {
+      "PropertyName": "CF_zipcode",
+      "TotalCount": 1233
+    }
+  ]
+}

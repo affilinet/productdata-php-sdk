@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Affilinet\ProductData\Requests\Helper\Query</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-Affilinet.html">
+						Affilinet<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Affilinet.ProductData.html">
+						ProductData<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Affilinet.ProductData.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Affilinet.ProductData.HttpClient.html">
+						HttpClient					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Affilinet.ProductData.Requests.html">
+						Requests<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Affilinet.ProductData.Requests.Helper.html">
+						Helper					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Affilinet.ProductData.Requests.Traits.html">
+						Traits					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Affilinet.ProductData.Responses.html">
+						Responses<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Affilinet.ProductData.Responses.ResponseElements.html">
+						ResponseElements					</a>
+
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Affilinet.ProductData.Requests.Helper.Expression.html">Expression</a></li>
+				<li class="active"><a href="class-Affilinet.ProductData.Requests.Helper.Query.html">Query</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Affilinet.ProductData.Requests.Helper.ExpressionInterface.html">ExpressionInterface</a></li>
+				<li><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html">QueryInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Affilinet.ProductData.Requests.Helper.html" title="Summary of Affilinet\ProductData\Requests\Helper"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Query</h1>
+
+
+	<div class="description">
+	<p>Class QueryBuilderTrait</p>
+
+<p>The keyword(s) you want the products to match. Can be any
+length. The following search operators are supported: - AND (both query tokens must be contained in the product, but not necessarily next to one another) - OR (any of the query tokens must be contained in the product) - NOT (e.g. with “ipod AND NOT nano”, you will get products, which match the query “ipod”, but at the same time don’t match “nano”) - "(phrase match: all query tokens inclosed with double quotes must be contained in the found products in that order) - () Parentheses, to group expressions So you can formulate a query like this: "apple ipod" ((touch OR classic) NOT nano) AND "32  GB"</p>
+
+<p>SearchProducts supports the wildcard ‘<em>’ for suffix matching, that
+is: a query ‘bott</em>’ will match for products, which contain the word
+“bottle” or the word “bottom”.
+Search operators “AND”, “OR” and “NOT” must be in capital
+letters.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Affilinet\ProductData\Requests\Helper\Query</span></b>			
+			 implements 
+				<a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html"><span>Affilinet\ProductData\Requests\Helper\QueryInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Affilinet.html">Affilinet</a>\<a href="namespace-Affilinet.ProductData.html">ProductData</a>\<a href="namespace-Affilinet.ProductData.Requests.html">Requests</a>\<a href="namespace-Affilinet.ProductData.Requests.Helper.html">Helper</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Affilinet.ProductData.Requests.Helper.Query.html#12-82" title="Go to source code">Affilinet/ProductData/Requests/Helper/Query.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getQuery" id="_getQuery">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getQuery">#</a>
+		<code><a href="source-class-Affilinet.ProductData.Requests.Helper.Query.html#35-41" title="Go to source code">getQuery</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html#_getQuery">Affilinet\ProductData\Requests\Helper\QueryInterface::getQuery()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="where" id="_where">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html">Affilinet\ProductData\Requests\Helper\QueryInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_where">#</a>
+		<code><a href="source-class-Affilinet.ProductData.Requests.Helper.Query.html#43-55" title="Go to source code">where</a>( <span><code><a href="class-Affilinet.ProductData.Requests.Helper.Expression.html">Affilinet\ProductData\Requests\Helper\Expression</a></code> <var>$expression</var></span>, <span> <var>$operator</var> = <span class="php-quote">'AND'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$expression</var></dt>
+					<dd></dd>
+					<dt><var>$operator</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html">Affilinet\ProductData\Requests\Helper\QueryInterface</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html#_where">Affilinet\ProductData\Requests\Helper\QueryInterface::where()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="andWhere" id="_andWhere">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html">Affilinet\ProductData\Requests\Helper\QueryInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_andWhere">#</a>
+		<code><a href="source-class-Affilinet.ProductData.Requests.Helper.Query.html#57-65" title="Go to source code">andWhere</a>( <span><code><a href="class-Affilinet.ProductData.Requests.Helper.Expression.html">Affilinet\ProductData\Requests\Helper\Expression</a></code> <var>$expression</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$expression</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html">Affilinet\ProductData\Requests\Helper\QueryInterface</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html#_andWhere">Affilinet\ProductData\Requests\Helper\QueryInterface::andWhere()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orWhere" id="_orWhere">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html">Affilinet\ProductData\Requests\Helper\QueryInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_orWhere">#</a>
+		<code><a href="source-class-Affilinet.ProductData.Requests.Helper.Query.html#67-75" title="Go to source code">orWhere</a>( <span><code><a href="class-Affilinet.ProductData.Requests.Helper.Expression.html">Affilinet\ProductData\Requests\Helper\Expression</a></code> <var>$expression</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$expression</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html">Affilinet\ProductData\Requests\Helper\QueryInterface</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Affilinet.ProductData.Requests.Helper.QueryInterface.html#_orWhere">Affilinet\ProductData\Requests\Helper\QueryInterface::orWhere()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="expr" id="_expr">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_expr">#</a>
+		<code><a href="source-class-Affilinet.ProductData.Requests.Helper.Query.html#77-80" title="Go to source code">expr</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
